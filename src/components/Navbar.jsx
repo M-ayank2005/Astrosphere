@@ -8,17 +8,23 @@ const Navbar = () => {
     };
 
     return (
-        <nav className="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <nav className="fixed w-full z-20 top-0 start-0 border-b border-gray-800/70 bg-slate-950/70 backdrop-blur-xl">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="http://localhost:3000/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                    <img src="https://www.pngitem.com/pimgs/m/75-751597_astrology-icon-hd-png-download.png" className="h-8 w-8  rounded-full shadow-md object-cover" alt="Astro Logo" />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">AstroSphere</span>
+                <a href="/home" className="flex items-center space-x-3 group">
+                    <img
+                        src="https://www.pngitem.com/pimgs/m/75-751597_astrology-icon-hd-png-download.png"
+                        alt="AstroSphere logo"
+                        className="h-9 w-9 rounded-xl bg-slate-900 border border-slate-700 shadow-lg shadow-emerald-500/40 group-hover:scale-105 transition-transform duration-300 object-cover"
+                    />
+                    <span className="text-2xl font-bold text-gradient">
+                        AstroSphere
+                    </span>
                 </a>
 
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     <button
                         type="button"
-                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                        className="cosmic-button cosmic-button--primary"
                         onClick={handleGetStartedClick}
                     >
                         Get started
@@ -26,7 +32,7 @@ const Navbar = () => {
                     <button
                         data-collapse-toggle="navbar-sticky"
                         type="button"
-                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-slate-400 rounded-lg md:hidden hover:bg-slate-800/80 focus:outline-none focus:ring-2 focus:ring-emerald-500/40"
                         aria-controls="navbar-sticky"
                         aria-expanded={isMenuOpen}
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -56,11 +62,11 @@ const Navbar = () => {
                     } w-full md:flex md:w-auto md:order-1`}
                     id="navbar-sticky"
                 >
-                    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-slate-800/70 rounded-2xl bg-slate-950/70 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500"
+                                className="block py-2 px-3 text-emerald-400 md:p-0"
                                 aria-current="page"
                             >
                                 Home
@@ -69,7 +75,7 @@ const Navbar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                                className="block py-2 px-3 text-slate-300 rounded hover:text-emerald-400 hover:bg-slate-900/60 md:hover:bg-transparent md:p-0"
                             >
                                 About
                             </a>
@@ -77,7 +83,7 @@ const Navbar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                                className="block py-2 px-3 text-slate-300 rounded hover:text-emerald-400 hover:bg-slate-900/60 md:hover:bg-transparent md:p-0"
                             >
                                 Services
                             </a>
@@ -85,7 +91,7 @@ const Navbar = () => {
                         <li>
                             <a
                                 href="#"
-                                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                                className="block py-2 px-3 text-slate-300 rounded hover:text-emerald-400 hover:bg-slate-900/60 md:hover:bg-transparent md:p-0"
                             >
                                 Contact
                             </a>

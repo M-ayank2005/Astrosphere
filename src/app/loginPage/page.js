@@ -25,19 +25,19 @@ function Page() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen w-full bg-gradient-to-br from-slate-900 to-slate-800 ">
-      <div className="w-full  bg-white rounded-2xl shadow-2xl overflow-hidden grid md:grid-cols-2">
+    <div className="flex items-center justify-center h-screen w-full bg-slate-950">
+      <div className="w-full max-w-5xl glass-effect rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-2 border border-slate-800">
         {/* Left Side - Cosmic Background */}
-        <div className="hidden md:flex flex-col justify-center p-12 bg-gray-700 text-white relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-full opacity-10">
-            <div className="absolute animate-float top-10 left-20 w-16 h-16 bg-white rounded-full"></div>
-            <div className="absolute animate-float-delay top-1/3 right-10 w-24 h-24 bg-white rounded-full"></div>
-            <div className="absolute animate-float-delay-2 bottom-10 left-1/3 w-20 h-20 bg-white rounded-full"></div>
+        <div className="hidden md:flex flex-col justify-center p-12 text-white relative overflow-hidden bg-slate-950">
+          <div className="absolute top-0 left-0 w-full h-full opacity-30">
+            <div className="absolute animate-float top-10 left-20 w-16 h-16 bg-emerald-400/30 rounded-full"></div>
+            <div className="absolute animate-float-delay top-1/3 right-10 w-24 h-24 bg-cyan-400/30 rounded-full"></div>
+            <div className="absolute animate-float-delay-2 bottom-10 left-1/3 w-20 h-20 bg-emerald-500/30 rounded-full"></div>
           </div>
           
           <div className="relative z-10 space-y-6">
             <div className="flex items-center space-x-4">
-              <Rocket className="w-12 h-12 text-white animate-pulse" />
+              <Rocket className="w-12 h-12 text-emerald-400 animate-pulse" />
               <span className="text-xl font-semibold">AstroSphere</span>
             </div>
             
@@ -51,31 +51,31 @@ function Page() {
             </p>
             
             <div className="flex items-center space-x-4">
-              <Star className="w-8 h-8 text-yellow-300" />
+              <Star className="w-8 h-8 text-emerald-300" />
               <span>Personalized Horoscopes</span>
             </div>
             <div className="flex items-center space-x-4">
-              <Moon className="w-8 h-8 text-indigo-300" />
+              <Moon className="w-8 h-8 text-cyan-300" />
               <span>Relationship Compatibility</span>
             </div>
             <div className="flex items-center space-x-4">
-              <Sun className="w-8 h-8 text-orange-300" />
+              <Sun className="w-8 h-8 text-emerald-200" />
               <span>Cosmic Learning Platform</span>
             </div>
           </div>
         </div>
         
         {/* Right Side - Authentication Form */}
-        <div className="flex flex-col justify-center h-screen space-y-6">
+        <div className="flex flex-col justify-center h-screen space-y-6 bg-slate-950/90">
           <div className={`w-full ${animation}`}>
             {isSignIn ? (
               <div className=" pt-8 px-8 space-y-10">
                 <div className="text-center">
-                  <h2 className="text-3xl font-bold text-emerald-600 flex items-center justify-center space-x-2">
+                  <h2 className="text-3xl font-bold text-gradient flex items-center justify-center space-x-2">
                     <LogIn className="w-8 h-8" />
                     <span>Sign In</span>
                   </h2>
-                  <p className="text-gray-500 mt-2">
+                  <p className="text-slate-400 mt-2">
                     Welcome back to your cosmic journey
                   </p>
                 </div>
@@ -83,11 +83,11 @@ function Page() {
                 <SignInForm />
                 
                 <div className="text-center ">
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-slate-400">
                     Don&apos;t have an account?{' '}
                     <button
                       onClick={toggleForm}
-                      className="text-black-600  bg-gray-400 p-1 px-2 mb-2 rounded-md hover:text-emerald-800 font-semibold transition-colors flex items-center justify-center space-x-1 mx-auto"
+                      className="cosmic-button text-xs px-3 py-1 mt-3"
                     >
                       <span>Sign Up</span>
                       <ArrowRight className="w-4 h-4" />
@@ -98,11 +98,11 @@ function Page() {
             ) : (
               <div className="space-y-8 p-5">
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl font-bold text-indigo-600 flex items-center justify-center space-x-2">
+                  <h2 className="text-3xl font-bold text-gradient flex items-center justify-center space-x-2">
                     <UserPlus className="w-8 h-8" />
                     <span>Sign Up</span>
                   </h2>
-                  <p className="text-gray-500 mt-2">
+                  <p className="text-slate-400 mt-2">
                     Begin your astrological adventure
                   </p>
                 </div>
@@ -110,11 +110,11 @@ function Page() {
                 <SignUpForm />
                 
                 <div className="text-center mt-6">
-                  <p className="text-sm text-gray-600">
+                  <p className="text-sm text-slate-400">
                     Already have an account?{' '}
                     <button
                       onClick={toggleForm}
-                      className="text-black-600 bg-gray-400 p-1 px-2 mb-2 rounded-md hover:text-indigo-800 font-semibold transition-colors flex items-center justify-center space-x-1 mx-auto"
+                      className="cosmic-button text-xs px-3 py-1 mt-3"
                     >
                       <span className=''>Log In</span>
                       <ArrowRight className="w-3 h-4" />

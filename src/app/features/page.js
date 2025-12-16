@@ -6,31 +6,31 @@ import { Heart, Users, Quote, Calendar, ArrowRight, Star, Book, Sparkles } from 
 
 function ServicesPage() {
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="min-h-screen bg-slate-950 text-slate-100">
       <Navbar2 />
 
       {/* Hero Section */}
-      <section className="bg-neutral-900 text-white py-10 pt-24 px-6 md:px-20">
+      <section className="bg-slate-950 text-slate-100 py-10 pt-24 px-6 md:px-20 star-field">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl tracking-wide md:text-5xl font-bold mb-6">
-            Explore Our Useful Services
+          <h1 className="text-4xl tracking-wide md:text-6xl font-bold mb-6 text-gradient">
+            Explore Our Cosmic Tools
           </h1>
-          <p className="text-xl text-gray-300 tracking-wide mb-8 leading-relaxed">
-            Dive into our comprehensive suite of astrological tools and services designed to 
-            enhance your love life and personal growth.
+          <p className="text-xl text-slate-300 tracking-wide mb-8 leading-relaxed">
+            Discover our comprehensive suite of astrological tools and services designed to
+            enhance your spiritual journey and personal growth.
           </p>
-          <div className="flex justify-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <Star className="w-5 h-5" />
-              <span>Personalized suggestions</span>
+          <div className="flex justify-center flex-wrap gap-6 mt-8">
+            <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-full border border-slate-700/70">
+              <Star className="w-5 h-5 text-emerald-400" />
+              <span>Personalized Insights</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <Sparkles className="w-5 h-5" />
-              <span>Daily Inspirationsal Quotes</span>
+            <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-full border border-slate-700/70">
+              <Sparkles className="w-5 h-5 text-emerald-300" />
+              <span>Daily Inspiration</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <Book className="w-5 h-5" />
-              <span>Expert Insights</span>
+            <div className="flex items-center space-x-2 glass-effect px-4 py-2 rounded-full border border-slate-700/70">
+              <Book className="w-5 h-5 text-cyan-300" />
+              <span>Expert Guidance</span>
             </div>
           </div>
         </div>
@@ -41,36 +41,38 @@ function ServicesPage() {
         <div className="max-w-6xl mx-auto space-y-20">
           {/* Love Calculator Service */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
+            <div className="glass-effect p-8 rounded-2xl">
               <div className="flex items-center space-x-4 mb-6">
-                <Heart className="w-8 h-8 text-neutral-700" />
-                <h2 className="text-3xl font-bold text-neutral-800">Love Percentage Calculator</h2>
+                <Heart className="w-8 h-8 text-emerald-400" />
+                <h2 className="text-3xl font-bold text-slate-100">Love Percentage Calculator</h2>
               </div>
-              <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
-                Our advanced love calculator uses astrological principles to analyze compatibility 
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+                Our advanced love calculator uses astrological principles to analyze compatibility
                 between partners. Get detailed insights into:
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Emotional compatibility based on moon signs</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Emotional compatibility based on moon signs</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Communication harmony through Mercury positions</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Communication harmony through Mercury positions</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Long-term relationship potential analysis</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Long-term relationship potential analysis</span>
                 </li>
               </ul>
-              <a href="/features/lovepercent" 
-                className="inline-flex items-center px-6 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-700 transition-colors">
+              <a
+                href="/features/lovepercent"
+                className="cosmic-button cosmic-button--primary inline-flex items-center px-6 py-3"
+              >
                 Try Calculator
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
+            <div className="rounded-2xl overflow-hidden shadow-lg glass-effect">
               <img
                 src="https://images.unsplash.com/photo-1484678002699-0e7dc5fa52c2?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fGxvdmUlMjBoZWFydCUyMHBhcnRuZXJzfGVufDB8fDB8fHww"
                 alt="Love Calculator"
@@ -81,38 +83,40 @@ function ServicesPage() {
 
           {/* Zodiac Matches Service */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg">
+            <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg glass-effect">
               <img
                 src="https://images.unsplash.com/photo-1574740637579-9ca0a610e491?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHBhcnRuZXIlMjBtYXRjaHxlbnwwfHwwfHx8MA%3D%3D"
                 alt="Zodiac Matches"
                 className="w-full h-[400px] object-cover"
               />
             </div>
-            <div className="order-1 md:order-2 bg-white p-8 rounded-2xl shadow-lg">
+            <div className="order-1 md:order-2 glass-effect p-8 rounded-2xl">
               <div className="flex items-center space-x-4 mb-6">
-                <Users className="w-8 h-8 text-neutral-700" />
-                <h2 className="text-3xl font-bold text-neutral-800">Zodiac Partner Matches</h2>
+                <Users className="w-8 h-8 text-emerald-400" />
+                <h2 className="text-3xl font-bold text-slate-100">Zodiac Partner Matches</h2>
               </div>
-              <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
-                Discover your ideal partner matches through our comprehensive zodiac analysis 
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+                Discover your ideal partner matches through our comprehensive zodiac analysis
                 system. Our advanced algorithms consider:
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Element compatibility (Fire, Earth, Air, Water)</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Element compatibility (Fire, Earth, Air, Water)</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Planetary alignments and their influence</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Planetary alignments and their influence</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Personal trait matching based on birth charts</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Personal trait matching based on birth charts</span>
                 </li>
               </ul>
-              <a href="/features/matches" 
-                className="inline-flex items-center px-6 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-700 transition-colors">
+              <a
+                href="/features/matches"
+                className="cosmic-button inline-flex items-center px-6 py-3"
+              >
                 Find Matches
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
@@ -121,36 +125,38 @@ function ServicesPage() {
 
           {/* Quotes Service */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="bg-white p-8 rounded-2xl shadow-lg">
+            <div className="glass-effect p-8 rounded-2xl">
               <div className="flex items-center space-x-4 mb-6">
-                <Quote className="w-8 h-8 text-neutral-700" />
-                <h2 className="text-3xl font-bold text-neutral-800">Daily Zodiac Inspiration</h2>
+                <Quote className="w-8 h-8 text-emerald-400" />
+                <h2 className="text-3xl font-bold text-slate-100">Daily Zodiac Inspiration</h2>
               </div>
-              <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
-                Start each day with personalized astrological wisdom and motivation. 
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+                Start each day with personalized astrological wisdom and motivation.
                 Our curated collection includes:
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Sign-specific daily affirmations</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Sign-specific daily affirmations</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Cosmic wisdom from renowned astrologers</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Cosmic wisdom from renowned astrologers</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Practical guidance based on planetary positions</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Practical guidance based on planetary positions</span>
                 </li>
               </ul>
-              <a href="/features/dailyquates" 
-                className="inline-flex items-center px-6 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-700 transition-colors">
+              <a
+                href="/features/dailyquates"
+                className="cosmic-button inline-flex items-center px-6 py-3"
+              >
                 Get Inspired
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>
-            <div className="rounded-2xl overflow-hidden shadow-lg">
+            <div className="rounded-2xl overflow-hidden shadow-lg glass-effect">
               <img
                 src="https://images.unsplash.com/photo-1642775418318-f0ce3f912475?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHFvdXRlc3xlbnwwfHwwfHx8MA%3D%3D"
                 alt="Zodiac Quotes"
@@ -161,38 +167,40 @@ function ServicesPage() {
 
           {/* Yearly Feedback Service */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg">
+            <div className="order-2 md:order-1 rounded-2xl overflow-hidden shadow-lg glass-effect">
               <img
                 src="https://images.unsplash.com/photo-1533073526757-2c8ca1df9f1c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fHN1Z2dlc3Rpb24lMjBiZXR0ZXJ8ZW58MHx8MHx8fDA%3D"
                 alt="Yearly Feedback"
                 className="w-full h-[400px] object-cover"
               />
             </div>
-            <div className="order-1 md:order-2 bg-white p-8 rounded-2xl shadow-lg">
+            <div className="order-1 md:order-2 glass-effect p-8 rounded-2xl">
               <div className="flex items-center space-x-4 mb-6">
-                <Calendar className="w-8 h-8 text-neutral-700" />
-                <h2 className="text-3xl font-bold text-neutral-800">Yearly Zodiac Guidance</h2>
+                <Calendar className="w-8 h-8 text-emerald-400" />
+                <h2 className="text-3xl font-bold text-slate-100">Yearly Zodiac Guidance</h2>
               </div>
-              <p className="text-lg text-neutral-600 mb-6 leading-relaxed">
-                Plan your year ahead with comprehensive astrological insights and 
+              <p className="text-lg text-slate-300 mb-6 leading-relaxed">
+                Plan your year ahead with comprehensive astrological insights and
                 personalized recommendations:
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Monthly opportunity forecasts</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Monthly opportunity forecasts</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Career and relationship guidance periods</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Career and relationship guidance periods</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <ArrowRight className="w-5 h-5 text-neutral-700 mt-1" />
-                  <span className="text-neutral-600">Personal growth and development timelines</span>
+                  <ArrowRight className="w-5 h-5 text-emerald-400 mt-1" />
+                  <span className="text-slate-300">Personal growth and development timelines</span>
                 </li>
               </ul>
-              <a href="/features/yearlyfeedback" 
-                className="inline-flex items-center px-6 py-3 bg-neutral-800 text-white rounded-lg hover:bg-neutral-700 transition-colors">
+              <a
+                href="/features/yearlyfeedback"
+                className="cosmic-button inline-flex items-center px-6 py-3"
+              >
                 Plan Your Year
                 <ArrowRight className="w-4 h-4 ml-2" />
               </a>

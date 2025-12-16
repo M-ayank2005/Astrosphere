@@ -3,19 +3,186 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Gamified Theme Palette - Fixed Colors */
+  --background: #020617; /* Dark Slate (slate-950) */
+  --surface: #1e293b;    /* Lighter Slate for cards */
+  --surface-hover: #334155;
+  --foreground: #f1f5f9; /* Light text */
+  --text-muted: #94a3b8;
+  
+  /* Accents - Solid Colors */
+  --primary: #6366f1;    /* Indigo */
+  --secondary: #ec4899;  /* Pink */
+  --accent: #06b6d4;     /* Cyan */
+  --success: #22c55e;
+  --warning: #eab308;
+  --error: #ef4444;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Borders */
+  --border: #334155;
+  --border-active: #6366f1;
 }
 
 body {
   color: var(--foreground);
+  background-color: var(--background);
+  /* No gradients */
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Gamified Card Style */
+.game-card {
+  background-color: var(--surface);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 4px 0 0 var(--primary);
+}
+
+/* Gamified Button Style */
+.game-button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  transition: all 0.1s ease;
+  box-shadow: 0 4px 0 0 #4338ca; /* Darker shade of primary */
+}
+
+.game-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 #4338ca;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--surface);
+  border-radius: 5px;
+  border: 2px solid var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+/* Utility for text glow if needed, but keeping it solid mostly */
+.text-glow {
+  text-shadow: 0 0 10px var(--primary);
+}
+
+/* Overrides for existing classes to enforce theme */
+.bg-gradient-to-b, .bg-gradient-to-r, .bg-gradient-to-l, .bg-gradient-to-t,
+.bg-gradient-to-br, .bg-gradient-to-bl, .bg-gradient-to-tr, .bg-gradient-to-tl {
+  background-image: none !important;
+  background-color: var(--surface) !important;
+}
+
+.text-gradient {
+  background: none !important;
+  -webkit-background-clip: initial !important;
+  -webkit-text-fill-color: initial !important;
+  color: var(--primary) !important;
+}
+
+/* Ensure text is visible when gradients are disabled */
+.text-transparent {
+  color: var(--foreground) !important;
+  -webkit-text-fill-color: var(--foreground) !important;
+  background: none !important;
+}
+
+/* Compatibility classes for existing elements */
+.cosmic-layer {
+  background-color: var(--background);
+}
+
+.glass-effect {
+  background-color: var(--surface);
+  border: 2px solid var(--border);
+  backdrop-filter: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.zodiac-card {
+  background: var(--surface) !important;
+  border: 2px solid var(--border);
+  box-shadow: none;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.zodiac-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 0 0 var(--primary);
+  transform: translateY(-4px);
+}
+
+.cosmic-button {
+  background-color: var(--surface);
+  border: 2px solid var(--border);
+  box-shadow: 0 4px 0 0 var(--border);
+  color: var(--foreground);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.cosmic-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 0 var(--border);
+}
+
+.cosmic-button--primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 4px 0 0 #4338ca;
+  color: white;
+}
+
+.cosmic-button--primary:hover {
+  box-shadow: 0 6px 0 0 #4338ca;
 }

@@ -129,55 +129,67 @@ const zodiacData = [
   
 
 function HomePage() {
-return (
-    <div className="bg-gray-200 min-h-screen">
-        <Navbar />
-        <header className="bg-black opacity-70 text-white text-center py-10 mt-16">
-            <h1 className="text-4xl font-bold">AstroSphere 2025 Horoscopes</h1>
-            <p className="mt-4 text-lg">Discover what the stars have in store for you this year.</p>
-        </header>
-        <main className="container mx-auto py-10 px-4">
-            {zodiacData.map((sign) => (
-                <section
-                    key={sign.name}
-                    className="bg-white rounded-lg shadow-lg mb-10 overflow-hidden"
-                >
-                    <div className="flex flex-col lg:flex-row">
-                        <div className="lg:w-1/2 p-8">
-                            <img
-                                src={sign.image.src}
-                                alt={sign.name}
-                                className="w-full h-64 object-contain shadow-md rounded-lg"
-                            />
+    return (
+        <div className="min-h-screen bg-slate-950 text-slate-100">
+            <Navbar />
+
+            <header className="mt-20 text-center py-10">
+                <h1 className="text-4xl font-bold">AstroSphere 2025 Horoscopes</h1>
+                <p className="mt-4 text-lg text-slate-300">
+                    Discover what the stars have in store for you this year.
+                </p>
+            </header>
+
+            <main className="container mx-auto py-10 px-4 space-y-10">
+                {zodiacData.map((sign) => (
+                    <section
+                        key={sign.name}
+                        className="zodiac-card"
+                    >
+                        <div className="flex flex-col lg:flex-row gap-6">
+                            <div className="lg:w-1/2 p-4 flex items-center justify-center">
+                                <img
+                                    src={sign.image.src}
+                                    alt={sign.name}
+                                    className="w-full max-w-md h-64 object-contain rounded-2xl border border-slate-700/60 bg-white shadow-lg"
+                                />
+                            </div>
+                            <div className="lg:w-1/2 p-4 flex flex-col justify-center space-y-4">
+                                <div>
+                                    <h2 className="text-3xl font-bold text-center text-emerald-400 mb-1">
+                                        {sign.name}
+                                    </h2>
+                                    <p className="text-center text-slate-400 text-sm uppercase tracking-wide">
+                                        {sign.dateRange}
+                                    </p>
+                                </div>
+                                <p className="text-slate-200 text-sm md:text-base leading-relaxed">
+                                    {sign.description}
+                                </p>
+                            </div>
                         </div>
-                        <div className="lg:w-1/2 p-8 flex flex-col justify-center">
-                            <h2 className="text-3xl font-bold text-center text-gray-800 mb-2">
-                                {sign.name}
-                            </h2>
-                            <p className="text-center text-gray-600 mb-4">{sign.dateRange}</p>
-                            <p className="text-gray-700 mb-6">{sign.description}</p>
+
+                        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div className="glass-effect rounded-2xl p-4">
+                                <h3 className="text-lg font-semibold mb-2 text-emerald-400">Career</h3>
+                                <p className="text-sm text-slate-200">{sign.career}</p>
+                            </div>
+                            <div className="glass-effect rounded-2xl p-4">
+                                <h3 className="text-lg font-semibold mb-2 text-emerald-400">Health</h3>
+                                <p className="text-sm text-slate-200">{sign.health}</p>
+                            </div>
+                            <div className="glass-effect rounded-2xl p-4">
+                                <h3 className="text-lg font-semibold mb-2 text-emerald-400">Love</h3>
+                                <p className="text-sm text-slate-200">{sign.love}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div className="p-8">
-                        <div className="bg-gray-50 p-4 rounded-lg shadow-md mb-6">
-                            <h3 className="text-xl font-semibold mb-2 text-purple-700">Career</h3>
-                            <p className="text-gray-700 mb-4">{sign.career}</p>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-lg shadow-md mb-6">
-                            <h3 className="text-xl font-semibold mb-2 text-purple-700">Health</h3>
-                            <p className="text-gray-700">{sign.health}</p>
-                        </div>
-                        <div className="bg-gray-50 p-4 rounded-lg shadow-md ">
-                            <h3 className="text-xl font-semibold mb-2 text-purple-700">Love</h3>
-                            <p className="text-gray-700 mb-4">{sign.love}</p>
-                        </div>
-                    </div>
-                </section>
-            ))}
-        </main>
-        <Footer />
-    </div>
-);
+                    </section>
+                ))}
+            </main>
+
+            <Footer />
+        </div>
+    );
 }
 
 export default HomePage;

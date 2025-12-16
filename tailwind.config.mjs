@@ -10,7 +10,13 @@ export default {
       colors: {
         customBlue: '#051133',
         background: "var(--background)",
+        surface: "var(--surface)",
+        "surface-hover": "var(--surface-hover)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+        border: "var(--border)",
       },
       keyframes: {
         float: {

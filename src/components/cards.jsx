@@ -2,26 +2,28 @@ import React from 'react';
 
 const Card = () => {
     return (
-        <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div className="zodiac-card max-w-sm">
             <a href="#">
-                <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+                <div className="overflow-hidden rounded-2xl mb-4 border border-slate-700/70 bg-slate-900/80">
+                    <img className="w-full h-44 object-cover" src="/docs/images/blog/image-1.jpg" alt="" />
+                </div>
             </a>
-            <div className="p-5">
+            <div className="space-y-3">
                 <a href="#">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+                    <h5 className="text-xl font-semibold tracking-tight text-slate-50">
                         Noteworthy technology acquisitions 2021
                     </h5>
                 </a>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                <p className="text-sm text-slate-300">
                     Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
                 </p>
                 <a
                     href="#"
-                    className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="cosmic-button text-xs px-4 py-2 inline-flex items-center gap-2"
                 >
                     Read more
                     <svg
-                        className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                        className="rtl:rotate-180 w-3.5 h-3.5"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"

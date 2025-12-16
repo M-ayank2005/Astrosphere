@@ -40,9 +40,9 @@ const FeatureSection = () => {
 
 
   return (
-    <div className="min-h-screen bg-black text-white p-8 md:p-12 flex items-center justify-center">
+    <div className="min-h-screen bg-slate-950 text-white p-8 md:p-12 flex items-center justify-center">
       <div className="max-w-7xl mx-auto w-full">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-10 md:mb-12 text-center text-gray-100">How to get Started</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-10 md:mb-12 text-center text-gradient">How to get Started</h2>
         <div className="flex flex-col md:grid md:grid-cols-2 gap-6 md:gap-10">
           {/* Features List */}
           <div className="order-2 md:order-1 space-y-8">
@@ -55,10 +55,10 @@ const FeatureSection = () => {
                 transition={{ duration: 0.5 }}
               >
                 <motion.div
-                  className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center ${
-                    index === currentFeature ? 'bg-blue-500 scale-110' : 'bg-gray-500'
-                  } border-2 ${
-                    index === currentFeature ? 'border-blue-400' : 'border-gray-400'
+                  className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center border-2 shadow-md ${
+                    index === currentFeature
+                      ? 'bg-emerald-500/20 border-emerald-400 text-emerald-300 scale-110'
+                      : 'bg-slate-800 border-slate-600 text-slate-300'
                   }`}
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -72,15 +72,15 @@ const FeatureSection = () => {
                 </motion.div>
 
                 <div className="flex-1">
-                  <h3 className="text-xl md:text-2xl font-semibold text-gray-200">{feature.step}</h3>
-                  <p className="text-sm md:text-lg text-gray-400">{feature.content}</p>
+                  <h3 className="text-xl md:text-2xl font-semibold text-slate-100">{feature.step}</h3>
+                  <p className="text-sm md:text-lg text-slate-400">{feature.content}</p>
                 </div>
               </motion.div>
             ))}
           </div>
 
           {/* Image Cards */}
-          <div className="order-1 md:order-2 relative h-[200px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-lg shadow-lg">
+          <div className="order-1 md:order-2 relative h-[200px] md:h-[300px] lg:h-[400px] overflow-hidden rounded-2xl shadow-xl glass-effect">
             <AnimatePresence mode="wait">
               {features.map(
                 (feature, index) =>
@@ -100,7 +100,7 @@ const FeatureSection = () => {
                         width={1000}
                         height={500}
                       />
-                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4"></div>
+                      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4" />
                     </motion.div>
                   )
               )}
