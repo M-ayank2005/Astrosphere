@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Navbar from '@/components/Navbar2';
 import Footer from '@/components/Footer';
 import { 
@@ -8,6 +9,7 @@ import {
 } from 'lucide-react';
 
 const ExplorePage = () => {
+  const router = useRouter();
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const exploreCategories = [
@@ -166,14 +168,13 @@ const ExplorePage = () => {
                 <p className="text-gray-400 text-sm mb-6 leading-relaxed">
                   {category.description}
                 </p>
-
                 {/* Items */}
                 <div className="space-y-3">
                   {category.items.map((item, itemIndex) => (
-                    <a
+                    <button
                       key={itemIndex}
-                      href={item.href}
-                      className="block group/item"
+                      onClick={() => router.push(item.href)}
+                      className="block group/item w-full text-left"
                     >
                       <div className="flex items-center gap-3 p-3 rounded-xl bg-slate-900/30 hover:bg-slate-900/60 border border-transparent hover:border-purple-500/30 transition-all duration-300">
                         <span className="text-2xl group-hover/item:scale-125 transition-transform duration-300">
@@ -189,7 +190,7 @@ const ExplorePage = () => {
                         </div>
                         <Zap className="w-4 h-4 text-purple-400 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
                       </div>
-                    </a>
+                    </button>
                   ))}
                 </div>
               </div>

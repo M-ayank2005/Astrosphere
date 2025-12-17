@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
 import Navbar2 from '@/components/Navbar2'
-import { User, Calendar, Heart, Star } from 'lucide-react'
+import { User, Calendar, Heart, Star, LogOut } from 'lucide-react'
 
 function Profile() {
   const [user, setUser] = useState(null)
@@ -13,6 +13,11 @@ function Profile() {
   const router = useRouter()
   const BackendApi =
     process.env.NEXT_PUBLIC_BACKEND_URL ?? 'http://localhost:5000'
+
+  const handleLogout = () => {
+    localStorage.removeItem('jwtToken');
+    router.push('/loginPage');
+  };
 
  useEffect(() => {
   const token = localStorage.getItem('jwtToken');
@@ -64,15 +69,25 @@ function Profile() {
       <div className="pt-24 pb-16 px-4">
         <div className="max-w-5xl mx-auto glass-effect rounded-3xl p-4 md:p-8">
           {/* Header */}
-          <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 mb-10 text-center md:text-left">
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shrink-0">
-              <User className="w-12 h-12 text-white" />
+          <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 mb-10 text-center md:text-left justify-between">
+            <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6">
+              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shrink-0">
+                <User className="w-12 h-12 text-white" />
+              </div>
+              <div className="flex items-center h-24">
+                  <h2 className="text-3xl font-bold text-white">
+                  {user.firstName} {user.lastName}
+                  </h2>
+              </div>
             </div>
-            <div className="flex items-center h-24">
-                <h2 className="text-3xl font-bold text-white">
-                {user.firstName} {user.lastName}
-                </h2>
-            </div>
+            
+            <button
+              onClick={handleLogout}
+              className="flex items-center gap-2 px-4 py-2 bg-red-500/10 hover:bg-red-500/20 text-red-400 rounded-lg transition-all duration-300 border border-red-500/20 hover:scale-105"
+            >
+              <LogOut className="w-5 h-5" />
+              <span>Logout</span>
+            </button>
           </div>
 
           {/* Profile Details */}
