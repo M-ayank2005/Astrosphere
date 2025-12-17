@@ -16,7 +16,7 @@ const Navbar = () => {
                         alt="AstroSphere logo"
                         className="h-9 w-9 rounded-xl bg-slate-900 border border-slate-700 shadow-lg shadow-emerald-500/40 group-hover:scale-105 transition-transform duration-300 object-cover"
                     />
-                    <span className="text-2xl font-bold text-gradient">
+                    <span className="text-xl md:text-2xl font-bold text-gradient">
                         AstroSphere
                     </span>
                 </a>
@@ -24,7 +24,7 @@ const Navbar = () => {
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     <button
                         type="button"
-                        className="cosmic-button cosmic-button--primary"
+                        className="hidden md:block cosmic-button cosmic-button--primary"
                         onClick={handleGetStartedClick}
                     >
                         Get started
@@ -94,6 +94,14 @@ const Navbar = () => {
                                 className="block py-2 px-3 text-slate-300 rounded hover:text-emerald-400 hover:bg-slate-900/60 md:hover:bg-transparent md:p-0"
                             >
                                 Contact
+                            </a>
+                        </li>
+                        <li className="md:hidden mt-2 pt-2 border-t border-slate-800">
+                            <a
+                                href="/loginPage"
+                                className="block py-2 px-3 text-emerald-400 font-bold rounded hover:bg-slate-900/60"
+                            >
+                                Get Started
                             </a>
                         </li>
                     </ul>

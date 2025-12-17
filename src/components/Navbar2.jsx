@@ -17,7 +17,7 @@ const Navbar = () => {
                         alt="AstroSphere logo"
                         className="h-7 w-7 rounded-xl bg-slate-900 border border-slate-700 shadow-lg shadow-emerald-500/40 group-hover:scale-105 transition-transform duration-300 object-cover"
                     />
-                    <span className="text-2xl font-bold tracking-wide ">
+                    <span className="text-xl md:text-2xl font-bold tracking-wide ">
                         AstroSphere
                     </span>
                 </a>
