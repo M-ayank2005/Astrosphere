@@ -25,8 +25,8 @@ function Page() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen w-full bg-slate-950 backdrop-blur-sm">
-      <div className="w-full rounded-xl shadow-xl overflow-hidden grid md:grid-cols-2 ">
+    <div className="flex items-center justify-center min-h-screen w-full bg-slate-950 backdrop-blur-sm">
+      <div className="w-full min-h-screen md:min-h-0 md:h-auto rounded-xl shadow-xl overflow-hidden grid md:grid-cols-2 ">
         {/* Left Side - Cosmic Background */}
         <div className="hidden md:flex flex-col justify-center p-12 text-white relative overflow-hidden bg-slate-950">
           <div className="absolute top-0 left-0 w-full h-full opacity-30">
@@ -66,15 +66,15 @@ function Page() {
         </div>
         
         {/* Right Side - Authentication Form */}
-        <div className="flex flex-col justify-center h-screen space-y-6 relative overflow-hidden bg-slate-950">
-          <div className="absolute top-0 left-0 w-full h-screen pointer-events-none">
+        <div className="flex flex-col justify-center min-h-screen md:min-h-0 md:h-screen space-y-6 relative overflow-hidden bg-slate-950 py-10 md:py-0">
+          <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
             <div className="absolute animate-float top-10 left-20 w-16 h-16 bg-emerald-400/30 rounded-full"></div>
             <div className="absolute animate-float-delay top-1/3 right-10 w-24 h-24 bg-cyan-400/30 rounded-full"></div>
             <div className="absolute animate-float-delay-2 bottom-10 left-1/3 w-20 h-20 bg-emerald-500/30 rounded-full"></div>
           </div>
           <div className={`w-full ${animation} relative z-10`}>
             {isSignIn ? (
-              <div className=" pt-8 px-8 space-y-10">
+              <div className="px-6 md:px-8 space-y-6 md:space-y-10">
                 <div className="text-center">
                   <h2 className="text-3xl font-bold text-white flex items-center justify-center space-x-2">
                     <LogIn className="w-8 h-8 text-emerald-400" />

@@ -78,7 +78,7 @@ function Page() {
               <span className="text-lg text-slate-300">Your Cosmic Journey Begins</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-extrabold text-gradient">
+            <h1 className="text-4xl md:text-7xl font-extrabold text-gradient">
               Explore Your Celestial Potential
             </h1>
             
@@ -87,16 +87,16 @@ function Page() {
               Discover how celestial movements shape your life, destiny, and personal growth.
             </p>
             
-            <div className="flex space-x-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:space-x-6">
               <a
                 href="/loginPage"
-                className="cosmic-button cosmic-button--primary px-8 py-4"
+                className="cosmic-button cosmic-button--primary px-8 py-4 text-center"
               >
                 Get Started
               </a>
               <a
                 href="#features"
-                className="px-8 py-4 glass-effect rounded-full text-slate-100 hover:-translate-y-0.5 transition-all duration-300 border border-slate-700/70"
+                className="px-8 py-4 glass-effect rounded-full text-slate-100 hover:-translate-y-0.5 transition-all duration-300 border border-slate-700/70 text-center"
               >
                 Learn More
               </a>

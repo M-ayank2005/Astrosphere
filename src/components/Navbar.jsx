@@ -62,7 +62,7 @@ const Navbar = () => {
                     } w-full md:flex md:w-auto md:order-1`}
                     id="navbar-sticky"
                 >
-                    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-slate-800/70 rounded-2xl bg-slate-950/70 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
+                    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-slate-800 rounded-2xl bg-slate-950 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent">
                         <li>
                             <a
                                 href="#"

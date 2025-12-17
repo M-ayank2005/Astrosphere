@@ -48,7 +48,7 @@ const Navbar = () => {
                         isMenuOpen ? "flex" : "hidden"
                     } w-full md:flex md:w-auto md:order-1`}
                 >
-                    <ul className="flex flex-col p-3 md:p-0 mt-3 text-sm font-medium rounded-lg bg-slate-900/70 md:space-x-6 md:flex-row md:mt-0 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none ">
+                    <ul className="flex flex-col p-3 md:p-0 mt-3 text-sm font-medium rounded-lg bg-slate-950 md:space-x-6 md:flex-row md:mt-0 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none border border-slate-800 md:border-0">
                         <li>
                             <a
                                 href="/home"
@@ -80,6 +80,15 @@ const Navbar = () => {
                             >
                                 <Grid3x3 className="w-4 h-4" />
                                 Explore
+                            </a>
+                        </li>
+                        <li className="md:hidden border-t border-slate-800 mt-2 pt-2">
+                            <a
+                                href="/profile"
+                                className="flex items-center gap-2 py-2 px-3 text-slate-300 hover:text-emerald-400 transition-colors duration-300 font-semibold"
+                            >
+                                <User className="w-4 h-4" />
+                                Profile
                             </a>
                         </li>
                     </ul>

@@ -62,15 +62,17 @@ function Profile() {
       <Navbar2 />
 
       <div className="pt-24 pb-16 px-4">
-        <div className="max-w-5xl mx-auto glass-effect rounded-3xl p-8">
+        <div className="max-w-5xl mx-auto glass-effect rounded-3xl p-4 md:p-8">
           {/* Header */}
-          <div className="flex items-center space-x-6 mb-10">
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+          <div className="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-6 mb-10 text-center md:text-left">
+            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shrink-0">
               <User className="w-12 h-12 text-white" />
             </div>
-            <h2 className="text-3xl font-bold text-white">
-              {user.firstName} {user.lastName}
-            </h2>
+            <div className="flex items-center h-24">
+                <h2 className="text-3xl font-bold text-white">
+                {user.firstName} {user.lastName}
+                </h2>
+            </div>
           </div>
 
           {/* Profile Details */}
