@@ -66,13 +66,18 @@ function Page() {
         </div>
         
         {/* Right Side - Authentication Form */}
-        <div className="flex flex-col justify-center h-screen space-y-6 bg-gradient-to-r from-blue-600/20 via-blue-500/20 to-blue-600/20 backdrop-blur-sm">
-          <div className={`w-full ${animation}`}>
+        <div className="flex flex-col justify-center h-screen space-y-6 relative overflow-hidden bg-slate-950">
+          <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+            <div className="absolute animate-float top-10 left-20 w-16 h-16 bg-emerald-400/30 rounded-full"></div>
+            <div className="absolute animate-float-delay top-1/3 right-10 w-24 h-24 bg-cyan-400/30 rounded-full"></div>
+            <div className="absolute animate-float-delay-2 bottom-10 left-1/3 w-20 h-20 bg-emerald-500/30 rounded-full"></div>
+          </div>
+          <div className={`w-full ${animation} relative z-10`}>
             {isSignIn ? (
               <div className=" pt-8 px-8 space-y-10">
                 <div className="text-center">
-                  <h2 className="text-3xl font-bold text-gradient flex items-center justify-center space-x-2">
-                    <LogIn className="w-8 h-8" />
+                  <h2 className="text-3xl font-bold text-white flex items-center justify-center space-x-2">
+                    <LogIn className="w-8 h-8 text-emerald-400" />
                     <span>Sign In</span>
                   </h2>
                   <p className="text-slate-400 mt-2">
@@ -98,8 +103,8 @@ function Page() {
             ) : (
               <div className="space-y-8 p-5">
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl font-bold text-gradient flex items-center justify-center space-x-2">
-                    <UserPlus className="w-8 h-8" />
+                  <h2 className="text-3xl font-bold text-white flex items-center justify-center space-x-2">
+                    <UserPlus className="w-8 h-8 text-emerald-400" />
                     <span>Sign Up</span>
                   </h2>
                   <p className="text-slate-400 mt-2">

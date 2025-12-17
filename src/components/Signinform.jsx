@@ -43,8 +43,8 @@ const SignInForm = () => {
 
   return (
     <div className="flex items-center justify-center w-full">
-      <div className="bg-white p-8 space-y-6 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-3xl font-semibold text-neutral-800 text-center mb-4">
+      <div className="bg-slate-900/50 backdrop-blur-md border border-slate-700 p-8 space-y-6 rounded-lg shadow-xl w-full max-w-md">
+        <h2 className="text-3xl font-semibold text-white text-center mb-4">
           Sign In
         </h2>
         
@@ -52,7 +52,7 @@ const SignInForm = () => {
           <div>
             <label 
               htmlFor="email" 
-              className="block text-sm font-medium text-neutral-700 mb-2"
+              className="block text-sm font-medium text-slate-300 mb-2"
             >
               Email Address
             </label>
@@ -63,7 +63,7 @@ const SignInForm = () => {
               autoComplete="email"
               placeholder="Enter your email"
               required
-              className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-neutral-500 text-neutral-800 placeholder-neutral-500"
+              className="w-full px-4 py-2 bg-slate-800/50 border border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white placeholder-slate-400"
             />
           </div>
           
@@ -71,13 +71,13 @@ const SignInForm = () => {
             <div className="flex justify-between items-center mb-2">
               <label 
                 htmlFor="password" 
-                className="block text-sm font-medium text-neutral-700"
+                className="block text-sm font-medium text-slate-300"
               >
                 Password
               </label>
               <button 
                 type="button"
-                className="text-xs text-neutral-600 hover:text-neutral-800 transition-colors"
+                className="text-xs text-emerald-400 hover:text-emerald-300 transition-colors"
               >
                 Forgot password?
               </button>
@@ -89,7 +89,7 @@ const SignInForm = () => {
               autoComplete="current-password"
               placeholder="Enter your password"
               required
-              className="w-full px-4 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-neutral-500 text-neutral-800 placeholder-neutral-500"
+              className="w-full px-4 py-2 bg-slate-800/50 border border-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500 text-white placeholder-slate-400"
             />
           </div>
           
@@ -97,7 +97,7 @@ const SignInForm = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 bg-neutral-800 text-white rounded-md hover:bg-neutral-700 transition-colors focus:outline-none focus:ring-2 focus:ring-neutral-500"
+              className="w-full py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold rounded-md hover:from-emerald-600 hover:to-cyan-600 transition-all focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-lg shadow-emerald-500/20"
             >
               {loading ? 'Signing in...' : 'Sign In'}
             </button>
