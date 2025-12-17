@@ -67,7 +67,7 @@ function Page() {
         
         {/* Right Side - Authentication Form */}
         <div className="flex flex-col justify-center h-screen space-y-6 relative overflow-hidden bg-slate-950">
-          <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
+          <div className="absolute top-0 left-0 w-full h-screen pointer-events-none">
             <div className="absolute animate-float top-10 left-20 w-16 h-16 bg-emerald-400/30 rounded-full"></div>
             <div className="absolute animate-float-delay top-1/3 right-10 w-24 h-24 bg-cyan-400/30 rounded-full"></div>
             <div className="absolute animate-float-delay-2 bottom-10 left-1/3 w-20 h-20 bg-emerald-500/30 rounded-full"></div>

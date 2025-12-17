@@ -154,7 +154,7 @@ const SignUpForm = () => {
                 <option value="Married" className="bg-slate-800 text-white">Married</option>
               </select>
             </div>
-            {status === 'Engaged' && (
+            {(status === 'Engaged'||status === 'Married') && (
               <div>
                 <label htmlFor="partnerName" className="block text-sm font-medium text-slate-300 mb-1">
                   Partner Name
