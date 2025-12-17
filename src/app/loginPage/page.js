@@ -26,7 +26,7 @@ function Page() {
 
   return (
     <div className="flex items-center justify-center h-screen w-full bg-slate-950 backdrop-blur-sm">
-      <div className="w-full max-w-5xl glass-effect rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-2 ">
+      <div className="w-full rounded-xl shadow-xl overflow-hidden grid md:grid-cols-2 ">
         {/* Left Side - Cosmic Background */}
         <div className="hidden md:flex flex-col justify-center p-12 text-white relative overflow-hidden bg-slate-950">
           <div className="absolute top-0 left-0 w-full h-full opacity-30">
