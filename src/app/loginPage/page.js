@@ -25,7 +25,7 @@ function Page() {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen w-full bg-slate-950">
+    <div className="flex items-center justify-center h-screen w-full bg-gradient-to-r from-blue-600/20 via-blue-500/20 to-blue-600/20 backdrop-blur-sm">
       <div className="w-full max-w-5xl glass-effect rounded-3xl shadow-2xl overflow-hidden grid md:grid-cols-2 border border-slate-800">
         {/* Left Side - Cosmic Background */}
         <div className="hidden md:flex flex-col justify-center p-12 text-white relative overflow-hidden bg-slate-950">
@@ -66,7 +66,7 @@ function Page() {
         </div>
         
         {/* Right Side - Authentication Form */}
-        <div className="flex flex-col justify-center h-screen space-y-6 bg-slate-950/90">
+        <div className="flex flex-col justify-center h-screen space-y-6 bg-gradient-to-r from-blue-600/20 via-blue-500/20 to-blue-600/20 backdrop-blur-sm">
           <div className={`w-full ${animation}`}>
             {isSignIn ? (
               <div className=" pt-8 px-8 space-y-10">

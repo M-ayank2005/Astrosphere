@@ -7,6 +7,7 @@ const SignUpForm = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState('');
   const [partnerName, setPartnerName] = useState('');
+  const BackendApi = process.env.NEXT_PUBLIC_BACKEND_URL ?? 'http://localhost:5000';
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -25,7 +26,7 @@ const SignUpForm = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/signup', {
+      const response = await fetch(`${BackendApi}/api/auth/signup`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),

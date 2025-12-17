@@ -14,6 +14,7 @@ function Profile() {
   const [formData, setFormData] = useState({})
   const [saving, setSaving] = useState(false)
   const router = useRouter()
+  const BackendApi = process.env.NEXT_PUBLIC_BACKEND_URL ?? 'http://localhost:5000';
 
   const zodiacSigns = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces']
 
@@ -27,7 +28,7 @@ function Profile() {
 
     const fetchProfile = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/profile', {
+        const response = await axios.get(`${BackendApi}/api/profile`, {
           headers: {
             'x-auth-token': token,
           },
@@ -74,7 +75,7 @@ function Profile() {
     try {
       const token = localStorage.getItem('token')
       const response = await axios.put(
-        'http://localhost:5000/api/profile',
+        `${BackendApi}/api/profile`,
         formData,
         {
           headers: {
