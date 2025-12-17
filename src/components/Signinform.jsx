@@ -2,10 +2,12 @@
 
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
+import { useRouter } from 'next/navigation'
 
 
 const SignInForm = () => {
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -27,8 +29,7 @@ const SignInForm = () => {
       if (response.ok) {
         localStorage.setItem('jwtToken', data.token);
         toast.success('Login successful!');
-        console.log(data.token);
-        window.location.href = '/home';
+        router.push('/home');
       } else {
         toast.error(data.message || 'Invalid credentials, please try again.');
         console.log("Login failed", data.message);
